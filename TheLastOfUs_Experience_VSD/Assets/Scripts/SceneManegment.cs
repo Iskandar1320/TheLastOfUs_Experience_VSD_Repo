@@ -5,19 +5,26 @@ using UnityEngine;
 
 public class SceneManegment : MonoBehaviour
 {
-    [SerializeField] private CanvasGroup panelToFade;
+    [SerializeField] private GameObject panelToFade;
+    private CanvasGroup groupPanelToFade;
     // Start is called before the first frame update
     void Start()
     {
+        groupPanelToFade = panelToFade.GetComponent<CanvasGroup>();
         FadeOut();
     }
     private void fadeIn()
     {
-        panelToFade.DOFade(1, 1);
+        groupPanelToFade.DOFade(1, 1);
+
     }
     private void FadeOut()
     {
-        panelToFade.DOFade(0, 1);
+        groupPanelToFade.DOFade(0, 1).OnComplete(() =>
+        {
+            panelToFade.SetActive(false);
+        });
+
     }
     
 }

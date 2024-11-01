@@ -7,9 +7,11 @@ public class PanelManegment : MonoBehaviour
 {
     [SerializeField] private Transform target;
     [SerializeField] private GameObject panelNegro;
+
     // Start is called before the first frame update
     void Start()
     {
+       
         StartCoroutine(WaitTheFadeIn());
         
     }
@@ -17,7 +19,8 @@ public class PanelManegment : MonoBehaviour
     {
         // Mueve el panel hacia la posición de `targetPosition` en `moveDuration` segundos.
         // setEase es para la suavidad "OJO"
-        panelNegro.transform.DOMove(target.position, 1).SetEase(Ease.InElastic);
+        panelNegro.transform.DOMove(target.position, 1).SetEase(Ease.InOutQuad);
+        panelNegro.SetActive(true);
     }
     private IEnumerator WaitTheFadeIn()
     {
