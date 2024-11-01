@@ -550,7 +550,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07f7bba0bdfed1c429ae0685183e39a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Cuidades
+  sceneName: Ciudades
 --- !u!1 &755249624
 GameObject:
   m_ObjectHideFlags: 0

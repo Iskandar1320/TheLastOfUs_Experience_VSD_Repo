@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Genoma Humano.unity
     guid: ae567fd79dbc6a84789ac5d8ac052644
   - enabled: 1
+    path: Assets/Scenes/C_Afectadas.unity
+    guid: eced6f215a95ab34189511439740c78a
+  - enabled: 1
     path: Assets/Scenes/Ciudades.unity
     guid: eb73099d149693c4eb9b9d1775c49312
   m_configObjects: {}
