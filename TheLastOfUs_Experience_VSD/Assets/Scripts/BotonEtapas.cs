@@ -6,29 +6,56 @@ using DG.Tweening;
 public class BotonEtapas : MonoBehaviour
 {
     public CanvasGroup[] paginas;
-    private int paginaActual = 0;
+    private int paginaActual = 0; // Índice de la página en la que estamos
     public float duracionTransicion = 0.5f;
+
+    private void Start()
+    {
+        // Inicializar para que solo la primera página esté activa
+        ActivarSoloPaginaActual();
+    }
+
+    private void ActivarSoloPaginaActual()
+    {
+        // Desactivar todas las páginas excepto la actual
+        for (int i = 0; i < paginas.Length; i++)
+        {
+            if (paginas[i] != null)
+            {
+                paginas[i].gameObject.SetActive(i == paginaActual);
+                paginas[i].alpha = i == paginaActual ? 1 : 0;
+            }
+        }
+    }
 
     // Método para avanzar a la siguiente página
     public void OnButtonClickAdelante()
     {
-        // Ocultar la página actual con fade-out
-        if (paginas[paginaActual] != null)
+        // Confirmar página actual antes de avanzar
+        Debug.Log("Página actual antes de avanzar: " + paginaActual);
+
+        // Guardar el índice anterior
+        int paginaAnterior = paginaActual;
+
+        // Actualizar el índice de la página actual antes de animar
+        paginaActual = (paginaActual + 1) % paginas.Length;
+        Debug.Log("Nuevo índice después de avanzar: " + paginaActual);
+
+        // Ocultar la página anterior con fade-out
+        if (paginas[paginaAnterior] != null)
         {
-            CanvasGroup paginaOcultar = paginas[paginaActual];
+            CanvasGroup paginaOcultar = paginas[paginaAnterior];
             DOTween.To(() => paginaOcultar.alpha, x => paginaOcultar.alpha = x, 0, duracionTransicion)
                 .OnComplete(() =>
                 {
                     paginaOcultar.gameObject.SetActive(false);
+                    ActivarSoloPaginaActual(); // Mostrar solo la página actualizada
 
-                    // Incrementar el índice para pasar a la siguiente página
-                    paginaActual = (paginaActual + 1) % paginas.Length;
-
-                    // Mostrar la siguiente página con fade-in
+                    // Mostrar la nueva página con fade-in
                     if (paginas[paginaActual] != null)
                     {
                         CanvasGroup paginaMostrar = paginas[paginaActual];
-                        paginaMostrar.alpha = 0; // Asegurarse de que empiece invisible
+                        paginaMostrar.alpha = 0;
                         paginaMostrar.gameObject.SetActive(true);
                         DOTween.To(() => paginaMostrar.alpha, x => paginaMostrar.alpha = x, 1, duracionTransicion);
                     }
@@ -39,23 +66,31 @@ public class BotonEtapas : MonoBehaviour
     // Método para retroceder a la página anterior
     public void OnButtonClickAtras()
     {
-        // Ocultar la página actual con fade-out
-        if (paginas[paginaActual] != null)
+        // Confirmar página actual antes de retroceder
+        Debug.Log("Página actual antes de retroceder: " + paginaActual);
+
+        // Guardar el índice anterior
+        int paginaAnterior = paginaActual;
+
+        // Actualizar el índice de la página actual antes de animar
+        paginaActual = (paginaActual - 1 + paginas.Length) % paginas.Length;
+        Debug.Log("Nuevo índice después de retroceder: " + paginaActual);
+
+        // Ocultar la página anterior con fade-out
+        if (paginas[paginaAnterior] != null)
         {
-            CanvasGroup paginaOcultar = paginas[paginaActual];
+            CanvasGroup paginaOcultar = paginas[paginaAnterior];
             DOTween.To(() => paginaOcultar.alpha, x => paginaOcultar.alpha = x, 0, duracionTransicion)
                 .OnComplete(() =>
                 {
                     paginaOcultar.gameObject.SetActive(false);
+                    ActivarSoloPaginaActual(); // Mostrar solo la página actualizada
 
-                    // Decrementar el índice para pasar a la página anterior
-                    paginaActual = (paginaActual - 1 + paginas.Length) % paginas.Length;
-
-                    // Mostrar la página anterior con fade-in
+                    // Mostrar la nueva página con fade-in
                     if (paginas[paginaActual] != null)
                     {
                         CanvasGroup paginaMostrar = paginas[paginaActual];
-                        paginaMostrar.alpha = 0; // Asegurarse de que empiece invisible
+                        paginaMostrar.alpha = 0;
                         paginaMostrar.gameObject.SetActive(true);
                         DOTween.To(() => paginaMostrar.alpha, x => paginaMostrar.alpha = x, 1, duracionTransicion);
                     }
