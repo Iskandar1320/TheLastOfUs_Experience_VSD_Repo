@@ -35,4 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/etapas/Infeccion4.unity
     guid: 8080bf57b0e7e9f4381c07bc6a9fd51c
+  - enabled: 1
+    path: Assets/Scenes/HongoDetails.unity
+    guid: 311fef79708337147be707e4c2163e7b
   m_configObjects: {}
