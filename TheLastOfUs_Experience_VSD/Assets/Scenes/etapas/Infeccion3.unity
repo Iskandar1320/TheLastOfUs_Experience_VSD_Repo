@@ -1475,7 +1475,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'FASE 3: ???'
+  m_text: 'FASE 3: CHASQUEADORES'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 25924d06c3064c541b0ab5825f48337e, type: 2}
   m_sharedMaterial: {fileID: 2440802910564620874, guid: 25924d06c3064c541b0ab5825f48337e, type: 2}
@@ -2119,14 +2119,14 @@ RectTransform:
   m_GameObject: {fileID: 1555759665}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.5212379, y: 2.7899594, z: 1.4455}
+  m_LocalScale: {x: 3.1593769, y: 4.0075526, z: 1.977471}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1860088779}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -230, y: -81}
+  m_AnchoredPosition: {x: -222, y: -76}
   m_SizeDelta: {x: 81.6373, y: 88.8949}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1555759667
@@ -2149,7 +2149,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 38d7348b3bc4d6b4fa6653663b4b81a2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 19fa0d395c814be468d3490dd63c7edb, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2313,7 +2313,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "no s\xE9 que va ac\xE1\nayuda\n"
+  m_text: "En esta etapa, el hongo deforma su cabeza y los deja ciegos, por lo que
+    emiten chasquidos para orientarse. Son extremadamente fuertes y peligrosos, representando
+    la p\xE9rdida total de humanidad en la infecci\xF3n."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d76bf9833c519c14d939961aa06cc220, type: 2}
   m_sharedMaterial: {fileID: 8086003248747432364, guid: d76bf9833c519c14d939961aa06cc220, type: 2}
@@ -2376,7 +2378,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -258.62402, w: -115.93985}
+  m_margin: {x: 0, y: 0, z: -229.62634, w: -115.93985}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
