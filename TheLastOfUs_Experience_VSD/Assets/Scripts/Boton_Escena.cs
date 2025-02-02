@@ -1,27 +1,29 @@
-using System.Collections;
+Ôªøusing System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Boton_Escena : MonoBehaviour
 {
-    [Header("ConfiguraciÛn de la Escena")]
+    [Header("Configuraci√≥nÓâ¢ de la Escena")]
     public string nombreEscena; // Nombre de la escena a cargar, asignado desde el inspector.
 
-    [Header("ConfiguraciÛn de TransiciÛn")]
-    public float duracionFade = 1f; // DuraciÛn del fade.
+    [Header("Configuraci√≥n de Transici√≥n")]
+    public float duracionFade = 1f; // DuraciÓâ¢ del fade.
 
     // CanvasGroup para controlar la opacidad
-    private CanvasGroup fadeCanvas;
+    [SerializeField] private CanvasGroup fadeCanvas;
 
     private void Start()
     {
-        // Crear un CanvasGroup en tiempo de ejecuciÛn si no existe uno en el GameObject
+
+        /*
+        // Crear un CanvasGroup en tiempo de ejecuciÓâ¢ si no existe uno en el GameObject
         fadeCanvas = gameObject.AddComponent<CanvasGroup>();
-        fadeCanvas.alpha = 0; // Comienza totalmente transparente
+        fadeCanvas.alpha = 0; // Comienza totalmente transparente*/
     }
 
-    // Este mÈtodo se llamar· al hacer clic en el botÛn
+    // Este mÈ®Åodo se llamar„Éªal hacer clic en el botÓâ¢
     public void CambiarEscenaConFade()
     {
         StartCoroutine(FadeOutAndChangeScene());
@@ -29,17 +31,18 @@ public class Boton_Escena : MonoBehaviour
 
     private IEnumerator FadeOutAndChangeScene()
     {
-        float tiempoTranscurrido = 0f;
+        /* float tiempoTranscurrido = 0f;
 
-        // Hacer el fade-out
-        while (tiempoTranscurrido < duracionFade)
-        {
-            tiempoTranscurrido += Time.deltaTime;
-            fadeCanvas.alpha = Mathf.Clamp01(tiempoTranscurrido / duracionFade);
-            yield return null;
-        }
+         // Hacer el fade-out
+         while (tiempoTranscurrido < duracionFade)
+         {
+             tiempoTranscurrido += Time.deltaTime;
+             fadeCanvas.alpha = Mathf.Clamp01(tiempoTranscurrido / duracionFade);
+             yield return null;
+         }*/
 
-        // Cambiar a la nueva escena despuÈs de que termine el fade-out
+        yield return new WaitForSeconds(1.2f);
+        // Cambiar a la nueva escena despuÈß∏ de que termine el fade-out
         SceneManager.LoadScene(nombreEscena);
     }
 

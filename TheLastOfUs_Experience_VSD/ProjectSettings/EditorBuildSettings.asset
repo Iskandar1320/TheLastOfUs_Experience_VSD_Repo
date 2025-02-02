@@ -9,17 +9,32 @@ EditorBuildSettings:
     path: Assets/Scenes/PantallaInicio.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Inicio Epidemia.unity
-    guid: aaa126e1a5e89ff4a94fa5ff717de6af
-  - enabled: 1
-    path: Assets/Scenes/Genoma Humano.unity
-    guid: ae567fd79dbc6a84789ac5d8ac052644
-  - enabled: 1
-    path: Assets/Scenes/C_Afectadas.unity
-    guid: eced6f215a95ab34189511439740c78a
-  - enabled: 1
     path: Assets/Scenes/Ciudades.unity
     guid: eb73099d149693c4eb9b9d1775c49312
+  - enabled: 1
+    path: "Assets/Scenes/Cronolog\xEDa.unity"
+    guid: dca56a8ca038b2348a2683ce028d712c
+  - enabled: 1
+    path: Assets/Scenes/SeleccionFases.unity
+    guid: debbc1fca0d9af14da20aad2c0529663
+  - enabled: 1
+    path: Assets/Scenes/SeleccionPuntosCriticos.unity
+    guid: 4539937cd9fc872469bf4f2f0d72b962
+  - enabled: 1
+    path: Assets/Scenes/SeleccionPuntosCriticos/PuntosDebiles0.unity
+    guid: 568298d561a9a114181713e65cc767bb
+  - enabled: 1
+    path: Assets/Scenes/SeleccionPuntosCriticos/PuntosDebiles1.unity
+    guid: 9ee7a977fbec14a41a364ec4922ef94a
+  - enabled: 1
+    path: Assets/Scenes/SeleccionPuntosCriticos/PuntosDebiles2.unity
+    guid: f89fecbcde39c6a4ca39ec33555d80bf
+  - enabled: 1
+    path: Assets/Scenes/SeleccionPuntosCriticos/PuntosDebiles3.unity
+    guid: 6a78503e6c219a24ebd1ea6837825e67
+  - enabled: 1
+    path: Assets/Scenes/SeleccionPuntosCriticos/PuntosDebiles4.unity
+    guid: 00745cc942aa69a49aa83661fa6e89dd
   - enabled: 1
     path: Assets/Scenes/etapas/Infeccion0.unity
     guid: 6c923e5e88e68ad42a070529d1154f1f
@@ -35,7 +50,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/etapas/Infeccion4.unity
     guid: 8080bf57b0e7e9f4381c07bc6a9fd51c
-  - enabled: 1
-    path: Assets/Scenes/HongoDetails.unity
-    guid: 311fef79708337147be707e4c2163e7b
   m_configObjects: {}
